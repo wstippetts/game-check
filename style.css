@@ -17,14 +17,26 @@ body {
 }
 
 .attackCard {
-  background-color: rgba(128, 128, 128, 0.742);
+  /* background-color: rgba(128, 128, 128, 0.742); */
   border-radius: 100%;
-  width: 350px;
-  height: 350px;
+  /* width: 350px;
+  height: 350px; */
+  box-shadow: 5px 5px 10px;
+  user-select: none;
 }
 
 .bottomSplash {
-  background-color: rgba(16, 194, 16, 0.558);
-  width: 100vw;
-  height: 20vh;
+  background-color: rgba(16, 194, 16, 0.316);
+  width: 97vw;
+  margin: 2vh;
+  border-radius: 5px 5px 10px;
+  border: 2px solid rgb(16, 194, 16);
+}
+
+.moneyCard {
+  margin-top: 2vh;
+  padding: 2vh;
+  background-color: rgba(50, 108, 167, 0.448);
+  border: 2px solid rgba(50, 108, 167, 0.764);
+  border-radius: 5px 5px 10px;
 }
