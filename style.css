@@ -31,6 +31,7 @@ body {
   margin: 2vh;
   border-radius: 5px 5px 10px;
   border: 2px solid rgb(16, 194, 16);
+  padding: 2vh;
 }
 
 .moneyCard {
