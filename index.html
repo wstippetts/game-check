@@ -35,7 +35,7 @@
   </style>
 </head>
 
-<body class="debug">
+<body class="">
   <header></header>
 
   <main id="main-hero" class="container-fluid d-flex splash">
@@ -43,7 +43,7 @@
     <div class="container-fluid">
       <div class="row text-light">
         <div class="col-12 col-md-3">
-          <h1>Money</h1>
+          <div id="money"></div>
         </div>
         <div class="col-12 col-md-4">
           <h1>purchased upgrades</h1>
@@ -55,15 +55,17 @@
     <div class="container">
       <div class="row text-light text-center">
         <div class="col-12">
-          <div class="attackCard">
+          <div class="attackCard" id="enemy" onclick="attackEnemy()">
 
           </div>
           <h1>center</h1>
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="row text-light flex-end">
+    <div class="container-fluid" id="console">
+      <!-- #region - lower console -->
+
+      <!-- <div class="row text-light flex-end">
         <div class="col-12">
           <div class="bottomSplash">
             <div class="row">
@@ -75,10 +77,10 @@
 
               </div>
               <div class="col-6">
-                <h3>weapons</h3>
-                <h3>weapons</h3>
-                <h3>support (interval atk)</h3>
-                <h3>support (interval atk)</h3>
+                <h3>BUY: <button onclick="addWeapon1()">🔫</button> ${commander.weapon1}</h3>
+                <h3>BUY: <button onclick="addWeapon2()">💣</button> ${commander.weapon2}</h3>
+                <h3>BUY: <button onclick="addSupport1()">🚀</button> #{commander.support1}</h3>
+                <h3>BUY: <button onclick="addSupport2()">☄️</button> #{commander.support2}</h3>
               </div>
 
             </div>
@@ -86,9 +88,11 @@
           </div>
 
         </div>
-      </div>
+      </div> -->
+
+      <!-- #endregion -->
     </div>
-    </div>
+
 
   </main>
 
