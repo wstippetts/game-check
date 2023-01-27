@@ -1,0 +1,30 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1610296669228-602fa827fc1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1075&q=80");
+  background-size: cover;
+
+}
+
+
+
+#main-hero {
+  min-height: calc(100vh - 75px);
+  flex-grow: 1;
+}
+
+.splash {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.attackCard {
+  background-color: rgba(128, 128, 128, 0.742);
+  border-radius: 100%;
+  width: 350px;
+  height: 350px;
+}
+
+.bottomSplash {
+  background-color: rgba(16, 194, 16, 0.558);
+  width: 100vw;
+  height: 20vh;
+}
