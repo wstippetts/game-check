@@ -5,7 +5,7 @@ let commander = {
   payPerClick: 1,
   support1: 0,
   support2: 0,
-  weapon1: 100,
+  weapon1: 0,
   weapon2: 0,
 
 }
@@ -27,12 +27,13 @@ function attackEnemy() {
 }
 
 function supportAttack() {
-  commander.money += (commander.support1 * 500) + (commander.support2 * 7500)
+  commander.money += ((commander.support1 * 500) + (commander.support2 * 7500))
+  commander.money.toFixed()
 }
 
 function updatePay() {
-  commander.payPerClick = (commander.weapon1 * 5) + (commander.weapon2 * 20) + 1
-
+  commander.payPerClick = ((commander.weapon1 * 5) + (commander.weapon2 * 20) + 1)
+  commander.payPerClick.toFixed()
   drawMoney()
 }
 
@@ -42,9 +43,9 @@ function drawMoney() {
   let supportTotal = (commander.support1 * 20) + (commander.support2 * 100)
   let printMoney = `
   
-  <b>🪙 CREDITS: </b> ${commander.money} <br>
-  <b>CREDIT per click</b> ${commander.payPerClick} <br>
-  <b>CREDITS FROM SUPPORT ${supportTotal} PER ${supportSpeedSeconds} SEC</b>
+  <b>🪙 CREDITS: </b> ${commander.money.toFixed(0)} <br>
+  <b>CREDIT per click</b> ${commander.payPerClick.toFixed(0)} <br>
+  <b>CREDITS FROM SUPPORT ${supportTotal.toFixed(0)} PER ${supportSpeedSeconds.toFixed(2)} SEC</b>
   
   `
   moneyElem.innerHTML = printMoney
@@ -64,10 +65,10 @@ function drawConsole() {
           
         </div>
         <div class="col-6">
-          <h3>BUY: 🪙${weapon1Cost} <button onclick="addWeapon1()">       🔫</button> ${commander.weapon1}</h3>
-          <h3>BUY: 🪙${weapon2Cost} <button onclick="addWeapon2()">     💣</button> ${commander.weapon2}</h3>
-          <h3>BUY: 🪙${support1Cost} <button onclick="addSupport1()">     🚀</button> ${commander.support1}</h3>
-          <h3>BUY: 🪙${support2Cost} <button onclick="addSupport2()">    ☄️</button> ${commander.support2}</h3>
+          <h3>BUY: 🪙${weapon1Cost.toFixed()} <button onclick="addWeapon1()">       🔫</button> ${commander.weapon1}</h3>
+          <h3>BUY: 🪙${weapon2Cost.toFixed()} <button onclick="addWeapon2()">     💣</button> ${commander.weapon2}</h3>
+          <h3>BUY: 🪙${support1Cost.toFixed()} <button onclick="addSupport1()">     🚀</button> ${commander.support1}</h3>
+          <h3>BUY: 🪙${support2Cost.toFixed()} <button onclick="addSupport2()">    ☄️</button> ${commander.support2}</h3>
         </div>
 
       </div>
@@ -91,6 +92,7 @@ function addWeapon1() {
     updatePay()
     drawConsole()
     weapon1Cost *= 1.05
+    weapon1Cost.toFixed(1)
   } else {
     noMoney()
   }
