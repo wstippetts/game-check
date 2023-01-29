@@ -137,7 +137,7 @@ function addSupport1() {
   if (commander.money >= support1Cost) {
     commander.money -= support1Cost
     commander.support1 += 1
-    support1Cost *= 1.05
+    support1Cost *= 1.06
     drawConsole()
     drawMoney()
   } else {
