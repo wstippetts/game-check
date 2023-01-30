@@ -75,7 +75,7 @@ function drawConsole() {
         </div>
         <div class="col-6">
           <div class="row">
-            <div class="col-3 d-flex align-items-center flex-wrap ">
+            <div class="col-5 d-flex align-items-center flex-wrap ">
               <h3> 
               BUY: 🪙${weapon1Cost.toFixed()} 
               </h3>
@@ -92,8 +92,8 @@ function drawConsole() {
             <div class="col-3 d-flex flex-column align-items-end flex-wrap">
               <h3>${commander.weapon1}<button class="m-1" onclick="addWeapon1()"> 🔫</button> </h3>
               <h3>${commander.weapon2}<button class="m-1" onclick="addWeapon2()"> 💣</button> </h3>
-              <h3>${commander.support1}<button class="m-1" onclick="addSupport1()"> 🚀</button> </h3>
-              <h3>${commander.support2}<button class="m-1" onclick="addSupport2()"> ☄️</button> </h3>
+              <h3>${commander.support1}<button class="autogun m-1" onclick="addSupport1()"> 🚀</button> </h3>
+              <h3>${commander.support2}<button class="autogun m-1" onclick="addSupport2()"> ☄️</button> </h3>
               </div>
             </div> 
           </div>        
@@ -161,7 +161,16 @@ function addSupport2() {
 //#endregion
 
 function noMoney() {
-  window.alert("Go earn some more money!")
+
+  Swal.fire({
+    position: 'top-end',
+    icon: 'fail',
+    title: 'You need more money!!!',
+    showConfirmButton: false,
+    timer: 750
+  })
+
+  // window.alert("Go earn some more money!")
 }
 
 function fireRate() {

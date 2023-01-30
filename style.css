@@ -19,15 +19,15 @@ body {
 .attackCard {
   /* background-color: rgba(128, 128, 128, 0.742); */
   border-radius: 100%;
-  /* width: 350px;
-  height: 350px; */
+  width: 250px;
+  height: 200px;
   box-shadow: 5px 5px 10px;
   user-select: none;
 }
 
 .bottomSplash {
   background-color: rgba(16, 194, 16, 0.316);
-  width: 97vw;
+  width: 90vw;
   margin: 2vh;
   border-radius: 5px 5px 10px;
   border: 2px solid rgb(16, 194, 16);
@@ -40,4 +40,25 @@ body {
   background-color: rgba(50, 108, 167, 0.448);
   border: 2px solid rgba(50, 108, 167, 0.764);
   border-radius: 5px 5px 10px;
+}
+
+@keyframes border-pulsate {
+  0% {
+    border-color: rgb(8, 44, 92);
+  }
+
+  50% {
+    border-color: rgba(0, 255, 255, 0);
+  }
+
+  100% {
+    border-color: rgb(8, 44, 92);
+  }
+}
+
+.autogun {
+  /* display: block; */
+  margin: 20px auto;
+  border: 3px solid black;
+  animation: border-pulsate 2s infinite;
 }
